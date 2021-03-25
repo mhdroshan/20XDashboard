@@ -28,7 +28,13 @@
     <link rel="stylesheet" href="assets/charts/m-chart/css/morris.css" />
     <!-- barchart -->
     <!-- <link rel="stylesheet" href="assets/charts/m-chart/vendor/css/style.css"> -->
-
+    <script>
+      jQuery.noConflict();
+      // Use jQuery via jQuery() instead of via $()
+      jQuery(document).ready(function () {
+        jQuery("div").hide();
+      });
+    </script>
     <script
       type="text/javascript"
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
@@ -50,7 +56,7 @@
             <div class="col-md-6">
               <div class="card" style="border: none">
                 <div class="card-body">
-                  <h5 class="card-title"><h3>Shifpppt</h3></h5>
+                  <h5 class="card-title"><h3>Shifpt</h3></h5>
                   <ul class="list-group">
                     <li class="list-group-item">
                       <div class="avatar-circle"></div>
@@ -268,13 +274,6 @@
     <script src="assets/charts/m-chart/vendor/js/dashboard.js"></script>
     <script src="assets/charts/m-chart/vendor/js/Chart.roundedBarCharts.js"></script>
     <!-- End custom js for this page-->
-    <script>
-      jQuery.noConflict();
-      // Use jQuery via jQuery() instead of via $()
-      jQuery(document).ready(function () {
-        jQuery("div").hide();
-      });
-    </script>
   </body>
 </html>
 <script
