@@ -247,7 +247,7 @@
   font-size: 240px;
 }
 .c100.small {
-  font-size: 65px;
+  font-size: 60px;
   font-weight: 600;
   float: right;
   margin: auto;
@@ -259,8 +259,8 @@
   left: 0;
   top: 0;
   width: 100%;
-  line-height: 65px;
-  font-size: 22px;
+  line-height: 60px;
+  font-size: 20px;
   color: black;
   display: block;
   text-align: center;

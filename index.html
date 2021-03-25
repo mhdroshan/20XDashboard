@@ -13,7 +13,7 @@
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -55,11 +55,12 @@
       }
       .box2-holder {
         height: 700px;
-        margin: auto;
-        flex-direction: column;
-        display: flex;
-        width: 280px;
-        background-color: white;
+    margin: auto;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    background-color: white;
+    max-width: 320px;
       }
       .box2-top {
         position: relative;
@@ -97,7 +98,7 @@
         margin: 10px auto;
         padding: 10px;
         border-radius: 8px;
-        border: 1px solid #8080805c;
+        border: 1px solid #80808038;
       }
       .boxData-title {
         float: left;
@@ -123,7 +124,7 @@
       .data-group {
         display: flex;
         flex-direction: column;
-        border: 1px solid #8080805c;
+        border: 1px solid #80808038;
         margin: 10px auto;
         width: 93%;
         border-radius: 8px;
@@ -131,49 +132,213 @@
       /* bar graph */
       .bar-holder {
         width: 100%;
-        margin: 20px auto;
+        margin: 30px auto;
+        background-color: white;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+  margin: 30px ​auto;
+  position: relative;
       }
+      .bar-holder h4 {
+  font-size: 23px;
+  font-weight: bold;
+  margin: 20px auto 20px 10px;
+}
+.barGraph-index{
+  margin: 20px auto;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    display: flex;
+    flex-direction: row;
+}
+.barGraph-point{
+  width: 15px;
+  border-radius: 2px;
+  height: 15px;
+  margin: 0 0 0 20px;
+}
+.barGraph-index p{
+  margin: 0;
+    line-height: 15px;
+    margin-left: 5px;
+}
     </style>
   </head>
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3">
+        <!-- <div class="col-sm-3">
           <div class="menu-bar">MENU</div>
-        </div>
+        </div> -->
 
         <!-- Dashboard -->
-        <div class="col-sm-9">
+        <div class="container-fluid">
           <div class="dash-holder">
             <div class="row">
-              <div class="col-lg-4 p-0">
-                <div class="box2-holder"></div>
-              </div>
-              <div class="col-lg-4 p-0">
-                <div class="box2-holder">
-                  <div class="box2-top">
-                    <h4 class="box2-head">Recruitment</h4>
-                    <div class="viewAll-buttton">View all</div>
+              <!-- first piechart-->
+              <div class="col-lg-6">
+                <div class="pieChart-holder">
+                  <div class="row">
+                  <div class="col-sm-5">
+                  <div class="pieChart-data ">
+                    <h4>Shift</h4>
+                    <div class="pieChart-content">
+                      <div style="background-color: #6E7C7C;" class="pie-point"></div>
+                      <p>This week 26 ( 200 Hrs )</p>
+                    </div>
+                    <div class="pieChart-content">
+                      <div style="background-color: #435560;" class="pie-point"></div>
+                      <p>This month 275 (2400 Hrs)</p>
+                    </div>
+                    <div class="pieChart-content">
+                      <div style="background-color: #435560;" class="pie-point"></div>
+                      <p>Open Shifts 17 (120 Hrs)</p>
+                    </div>
+                    <div class="pieChart-content">
+                      <div style="background-color: #92967D;" class="pie-point"></div>
+                      <p>Unpublished Shifts 28 (160 Hrs)</p>
+                    </div>
+                    <div class="pieChart-content">
+                      <div style="background-color: #000000;" class="pie-point"></div>
+                      <p>Ongoing Shifts</p>
+                    </div>
                   </div>
-                  <!-- data 1 -->
+                </div>
+                  <div class="col-sm-7 mx-auto">
+                    
+                  <div id="graph" ></div>
+                </div>
+              </div>
+                </div>
+              </div>
+
+              <!-- second pie chart -->
+              <div class="col-lg-6">
+                <div class="pieChart-holder">
+                  <div class="row">
+                  <div class="col-sm-5">
+                  <div class="pieChart-data ">
+                    <h4>Invoice</h4>
+                    <div class="pieChart-content">
+                      <div style="background-color: #855CF8;" class="pie-point"></div>
+                      <p>Total Invoice</p>
+                    </div>
+                    <div class="pieChart-content">
+                      <div style="background-color: #B085FF;" class="pie-point"></div>
+                      <p>
+                        Over Due</p>
+                    </div>
+                    <div class="pieChart-content">
+                      <div style="background-color: #503795;" class="pie-point"></div>
+                      <p>Ready to Invoice</p>
+                    </div>
+                    <div class="pieChart-content">
+                      <div style="background-color: #FF0505;" class="pie-point"></div>
+                      <p>Homes Ready to Invoice</p>
+                    </div>
+                   
+                  </div>
+                </div>
+                  <div class="col-sm-7 mx-auto">
+                  <div id="invoice" ></div>
+                </div>
+              </div>
+                </div>
+              </div>
+
+
+            </div>
+
+
+
+            <div class="row">
+              <div class="col-lg-4 p-0">
+                <div class="box2-holder"><div class="box2-top">
+                  <h4 class="box2-head">Recruitment</h4>
+                  <div class="viewAll-buttton">View all</div>
+                </div>
+                <!-- data 1 -->
+                <div class="box2-data">
+                  <p class="boxData-title">Top candidate</p>
+                  <div class="c100 p12 small">
+                    <span>12</span>
+                    <div class="slice">
+                      <div class="bar color2"></div>
+                      <div class="fill"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="data-group">
+                  <h5>New registrations</h5>
+
+                  <!-- data 2 -->
                   <div class="box2-data">
                     <p class="boxData-title">Top candidate</p>
-                    <div class="c100 p12 small">
-                      <span>12</span>
+                    <div class="c100 p50 small">
+                      <span>50</span>
+                      <div class="slice">
+                        <div class="bar color1"></div>
+                        <div class="fill"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- data 3 -->
+                  <div class="box2-data">
+                    <p class="boxData-title">Top candidate</p>
+                    <div class="c100 p20 small">
+                      <span>20</span>
                       <div class="slice">
                         <div class="bar"></div>
                         <div class="fill"></div>
                       </div>
                     </div>
                   </div>
+                </div>
+                <!-- group 2 -->
+                <div class="data-group">
+                  <h5>Staff action</h5>
+
+                  <!-- data 4 -->
+                  <div class="box2-data">
+                    <p class="boxData-title">This week</p>
+                    <div class="c100 p88 small">
+                      <span>88</span>
+                      <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- data 5 -->
+                  <div class="box2-data">
+                    <p class="boxData-title">This month</p>
+                    <div class="c100 p73 small">
+                      <span>73</span>
+                      <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div></div>
+              </div>
+              <div class="col-lg-4 p-0">
+                <div class="box2-holder">
+                  <div class="box2-top">
+                    <h4 class="box2-head">Staff</h4>
+                    <div class="viewAll-buttton">View all</div>
+                  </div>
+                  <!-- data 1 -->
                   <div class="data-group">
-                    <h5>New registrations</h5>
+                    <h5>Complaince Warning</h5>
 
                     <!-- data 2 -->
                     <div class="box2-data">
-                      <p class="boxData-title">Top candidate</p>
-                      <div class="c100 p50 small">
-                        <span>50</span>
+                      <p class="boxData-title">Due</p>
+                      <div class="c100 p5 small">
+                        <span>5</span>
                         <div class="slice">
                           <div class="bar"></div>
                           <div class="fill"></div>
@@ -182,11 +347,11 @@
                     </div>
                     <!-- data 3 -->
                     <div class="box2-data">
-                      <p class="boxData-title">Top candidate</p>
-                      <div class="c100 p20 small">
-                        <span>20</span>
+                      <p class="boxData-title">Expired</p>
+                      <div class="c100 p8 small">
+                        <span>8</span>
                         <div class="slice">
-                          <div class="bar"></div>
+                          <div class="bar color2"></div>
                           <div class="fill"></div>
                         </div>
                       </div>
@@ -194,13 +359,13 @@
                   </div>
                   <!-- group 2 -->
                   <div class="data-group">
-                    <h5>Staff action</h5>
+                    <h5>Complaince Warning</h5>
 
                     <!-- data 4 -->
                     <div class="box2-data">
-                      <p class="boxData-title">This week</p>
-                      <div class="c100 p88 small">
-                        <span>88</span>
+                      <p class="boxData-title">Staff on holiday</p>
+                      <div class="c100 p0 small">
+                        <span>0</span>
                         <div class="slice">
                           <div class="bar"></div>
                           <div class="fill"></div>
@@ -209,9 +374,9 @@
                     </div>
                     <!-- data 5 -->
                     <div class="box2-data">
-                      <p class="boxData-title">This month</p>
-                      <div class="c100 p73 small">
-                        <span>73</span>
+                      <p class="boxData-title">Non-compliant staff</p>
+                      <div class="c100 p0 small">
+                        <span>0</span>
                         <div class="slice">
                           <div class="bar"></div>
                           <div class="fill"></div>
@@ -223,23 +388,119 @@
               </div>
 
               <div class="col-lg-4 p-0">
-                <div class="box2-holder"></div>
+                <div class="box2-holder">
+                  <div class="box2-top">
+                    <h4 class="box2-head">Clients</h4>
+                    <div class="viewAll-buttton">View all</div>
+                  </div>
+                  <!-- data 1 -->
+                  <div class="box2-data">
+                    <p class="boxData-title">Booked Shift Week</p>
+                    <div class="c100 p56 small">
+                      <span>56</span>
+                      <div class="slice">
+                        <div class="bar color1"></div>
+                        <div class="fill"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box2-data">
+                    <p class="boxData-title">Cancelled Shift</p>
+                    <div class="c100 p12 small">
+                      <span>12</span>
+                      <div class="slice">
+                        <div class="bar color1"></div>
+                        <div class="fill"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box2-data">
+                    <p class="boxData-title">Inactive This Month</p>
+                    <div class="c100 p56 small">
+                      <span>56</span>
+                      <div class="slice">
+                        <div class="bar color1"></div>
+                        <div class="fill"></div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                </div>
               </div>
             </div>
             <!-- bar graph -->
-            <div class="bar-holder"><div id="example-one">Loading...</div></div>
+            <div class="bar-holder">
+<div class="barGraph-index">
+<div class="barGraph-point" style="background-color: #B4AEE8;"></div>
+<p>Month</p>
 
-            <!-- linear progress bar -->
+<div class="barGraph-point" style="background-color: #283975;"></div>
+<p>Week</p>
+</div>
+              <h4>Monthly Invoice/ Shift Data</h4>
+              <canvas id="sales-chart"></canvas></div>
+
+           <!-- pie chart 3 -->
             <div class="row">
-              <div class="col-sm-6">
+              <div class="col-lg-6">
+                <div class="col-sm-12 mx-auto">
+                  <div class="pieChart-holder">
+                    <div class="progBar-top-right">Week</div>
+                    
+                      <h4 class="pieChart-v-title">Shift</h4>
+                      
+                  <div id="timesheet"></div>
+                  <div class="pieChart-v-contents row">
+                    <div class="col-sm-6">
+                      <div class="pieChart-v-data">
+                        <div class="pieChart-v-point" style="background-color: #440a67;">
+                          70
+                        </div>
+                        <p>Total Time Sheet</p>
+                      </div>
+                      <div class="pieChart-v-data">
+                        <div class="pieChart-v-point" style="background-color: #93329E;">
+                          30
+                        </div>
+                        <p>Signed off</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      
+                        <div class="pieChart-v-data">
+                          <div class="pieChart-v-point" style="background-color: #b4aee8;">
+                            52
+                          </div>
+                          <p>Pending sign off
+
+                          </p>
+                        </div>
+                        <div class="pieChart-v-data">
+                          <div class="pieChart-v-point" style="background-color: #FFE3FE;">
+                            52
+                          </div>
+                          <p>Pending submission</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                </div>
+
+              
+               <!-- linear progress bar -->
+              <div class="col-lg-6">
                 <div class="progBar-holder">
-                  <h4>Top candidate</h4>
                   <p class="progBar-top-right">Week</p>
+                  <h4>Top candidate</h4>
+                  
                   <div class="progBar-collection">
                     <div class="progBar-data">
                       <p class="title">Name 1</p>
                       <div class="single-progressbar">
-                        <div class="html"></div>
+                        <div class="data1"></div>
                       </div>
                     </div>
                  
@@ -247,7 +508,7 @@
                       <div class="progBar-data">
                         <p class="title">name 2</p>
                         <div class="single-progressbar">
-                          <div class="css"></div>
+                          <div class="data2"></div>
                         </div>
                       </div>
                    
@@ -255,7 +516,7 @@
                       <div class="progBar-data">
                         <p class="title">name 3</p>
                         <div class="single-progressbar">
-                          <div class="php"></div>
+                          <div class="data3"></div>
                         </div>
                       </div>
                     
@@ -263,7 +524,7 @@
                       <div class="progBar-data">
                         <p class="title">name 4</p>
                         <div class="single-progressbar">
-                          <div class="javascript"></div>
+                          <div class="data4"></div>
                         </div>
                       </div>
                     
@@ -271,14 +532,16 @@
                       <div class="progBar-data">
                         <p class="title">name 5</p>
                         <div class="single-progressbar">
-                          <div class="jquery"></div>
+                          <div class="data5"></div>
                         </div>
                       </div>
                     </div>
               </div>
                 </div>
+            </div>
               </div>
-              <div class="col-sm-6"></div>
+             
+              
             </div>
           </div>
         </div>
@@ -286,57 +549,150 @@
     </div>
 
     <!-- scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <script src="./assets/morris.js"></script>
     <script src="./bar-graph.js"></script>
-    <script src="./prog-bar.js"></script>
-    <!-- prog bar -->
+    <script src="./assets/bar-graph/Chart.min.js"></script>
+      <script src="./assets/bar-graph/Chart.roundedBarCharts.js"></script>
+      <!-- <script src="./assets/bar-graph/vendor.bundle.base.js"></script> -->
+      <!-- prog bar -->
+      <script src="./prog-bar.js"></script>
     <script>
       (function ($) {
         "use strict";
 
-        $(".html").rProgressbar({
+        $(".data1").rProgressbar({
           percentage: 80,
           fillBackgroundColor: "#1abc9c",
         });
-        $(".css").rProgressbar({
+        $(".data2").rProgressbar({
           percentage: 90,
           fillBackgroundColor: "#2ecc71",
         });
 
-        $(".php").rProgressbar({
+        $(".data3").rProgressbar({
           percentage: 75,
           fillBackgroundColor: "#9b59b6",
         });
 
-        $(".javascript").rProgressbar({
+        $(".data4").rProgressbar({
           percentage: 65,
           fillBackgroundColor: "#34495e",
         });
 
-        $(".jquery").rProgressbar({
+        $(".data5").rProgressbar({
           percentage: 95,
           fillBackgroundColor: "#f1c40f",
           backgroundColor: "#e67e22",
         });
       })(jQuery);
     </script>
+<!-- pie chart -->
+<script>
+  Morris.Donut({
+    element: "graph",
+    resize: true,
+    colors: [
+      "#000000",
+      "#435560",
+      "#6E7C7C",
+      "#C8C6A7",
+      "#92967D",
+      "#00BCD4",
+      "#00ACC1",
+      "#0097A7",
+      "#00838F",
+      "#006064",
+    ],
+    labelColor: ["#435560"],
+    data: [
+      { value: 26, label: "This week 26 ( 200 Hrs )" },
+      { value: 275, label: "This month 275 (2400 Hrs)" },
+      { value: 17, label: "Open Shifts 17 (120 Hrs)" },
+      { value: 28, label: "Unpublished Shifts 28 (160 Hrs)" },
+      { value: 1, label: "Ongoing Shifts" },
+    ],
+    resize: true,
+    formatter: function (x) {
+      return x + "";
+    },
+  }).on("click", function (i, row) {
+    console.log(i, row);
+  });
+</script>
+<!-- pie chart 2 -->
+<script>
+  Morris.Donut({
+    element: "invoice",
+    resize: true,
+    colors: [
+      "#855CF8",
+      "#B085FF",
+      "#503795",
+      "#FF0505",
+      "#FF0505",
+      "#00BCD4",
+      "#00ACC1",
+      "#0097A7",
+      "#00838F",
+      "#006064",
+    ],
+    labelColor: "#435560",
+    data: [
+      { value: 26, label: "Total Invoice" },
+      { value: 275, label: "Over Due" },
+      { value: 17, label: "Ready To Invoice" },
+      { value: 28, label: "Homes Ready To Invoice" },
+    ],
+    formatter: function (x) {
+      return x + "";
+    },
+  }).on("click", function (i, row) {
+    console.log(i, row);
+  });
+</script>
+<!-- pie chart 3 -->
+<script>
+  Morris.Donut({
+    element: "timesheet",
+    resize: true,
+    colors: [
+      "#440A67",
+      "#93329E",
+      "#B4AEE8",
+      "#FFE3FE",
+      "#FF0505",
+      "#00BCD4",
+      "#00ACC1",
+      "#0097A7",
+      "#00838F",
+      "#006064",
+    ],
+    labelColor: "#435560",
+    data: [
+      { value: 70, label: "Total Time Sheet" },
+      { value: 30, label: "Signed Off" },
+      { value: 52, label: "Pending Sign Off" },
+      { value: 52, label: "Pending Submittion" },
+    ],
+    formatter: function (x) {
+      return x + "";
+    },
+  }).on("click", function (i, row) {
+    console.log(i, row);
+  });
+</script>
 
-    <script>
-      $("#example-one").simpleBarGraph({
-        data: [
-          { key: "jQuery", value: 100 },
-          { key: "JavaScript", value: 95 },
-          { key: "HTML", value: 96 },
-          { key: "CSS", value: 44 },
-          { key: "AngularJS", value: 32 },
-          { key: "ReactJS", value: 55 },
-          { key: "VueJS", value: 91 },
-        ],
-        height: "200px",
-        barsColor: "#222",
-      });
-    </script>
+
+<!-- bar graph -->
+
+    
   </body>
 </html>
