@@ -11,6 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- bootstrap -->
     <link
@@ -20,16 +25,10 @@
       crossorigin="anonymous"
     />
     <!-- scripts -->
-    <script
-      src="https://code.jquery.com/jquery-1.12.4.min.js"
-      integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./bar-graph.js"></script>
 
     <!-- css -->
     <link rel="stylesheet" href="./circle.css" />
-    <link rel="stylesheet" href="./bar-graph.css" />
+    <link rel="stylesheet" href="./graph.css" />
     <style>
       body {
         box-sizing: border-box;
@@ -229,12 +228,100 @@
             </div>
             <!-- bar graph -->
             <div class="bar-holder"><div id="example-one">Loading...</div></div>
+
+            <!-- linear progress bar -->
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="progBar-holder">
+                  <h4>Top candidate</h4>
+                  <p class="progBar-top-right">Week</p>
+                  <div class="progBar-collection">
+                    <div class="progBar-data">
+                      <p class="title">Name 1</p>
+                      <div class="single-progressbar">
+                        <div class="html"></div>
+                      </div>
+                    </div>
+                 
+                    
+                      <div class="progBar-data">
+                        <p class="title">name 2</p>
+                        <div class="single-progressbar">
+                          <div class="css"></div>
+                        </div>
+                      </div>
+                   
+                   
+                      <div class="progBar-data">
+                        <p class="title">name 3</p>
+                        <div class="single-progressbar">
+                          <div class="php"></div>
+                        </div>
+                      </div>
+                    
+                   
+                      <div class="progBar-data">
+                        <p class="title">name 4</p>
+                        <div class="single-progressbar">
+                          <div class="javascript"></div>
+                        </div>
+                      </div>
+                    
+                   
+                      <div class="progBar-data">
+                        <p class="title">name 5</p>
+                        <div class="single-progressbar">
+                          <div class="jquery"></div>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+                </div>
+              </div>
+              <div class="col-sm-6"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <script src="./bar-graph.js"></script>
+    <script src="./prog-bar.js"></script>
+    <!-- prog bar -->
+    <script>
+      (function ($) {
+        "use strict";
+
+        $(".html").rProgressbar({
+          percentage: 80,
+          fillBackgroundColor: "#1abc9c",
+        });
+        $(".css").rProgressbar({
+          percentage: 90,
+          fillBackgroundColor: "#2ecc71",
+        });
+
+        $(".php").rProgressbar({
+          percentage: 75,
+          fillBackgroundColor: "#9b59b6",
+        });
+
+        $(".javascript").rProgressbar({
+          percentage: 65,
+          fillBackgroundColor: "#34495e",
+        });
+
+        $(".jquery").rProgressbar({
+          percentage: 95,
+          fillBackgroundColor: "#f1c40f",
+          backgroundColor: "#e67e22",
+        });
+      })(jQuery);
+    </script>
 
     <script>
       $("#example-one").simpleBarGraph({

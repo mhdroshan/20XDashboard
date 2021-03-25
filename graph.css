@@ -129,3 +129,134 @@
   border-color: transparent #000 transparent transparent;
   z-index: 2;
 }
+
+/* linear progress bar */
+.progBar-holder {
+  background-color: white;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+}
+.progBar-holder h4 {
+  font-size: 27px;
+  font-weight: bold;
+  margin: 20px auto 20px 10px;
+}
+.progBar-top-right {
+  color: #817d7d;
+  font-size: 14px;
+  position: absolute;
+  right: 45px;
+  top: 35px;
+  margin-bottom: 0;
+}
+.progBar-collection {
+  margin: 40px ​auto 10px;
+  width: 100%;
+}
+.single-progressbar .title {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+.single-progressbar {
+  width: 60%;
+  position: relative;
+  margin: 30px 15px 10px 0;
+}
+.progBar-data {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.progBar-data p {
+  font-size: 15px;
+  width: 40%;
+  margin: 8px 10px;
+  font-weight: bold;
+  align-self: center;
+  text-transform: capitalize;
+}
+.card {
+  margin-bottom: 30px;
+}
+
+.card .card-header .title {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 0;
+}
+
+.card .card-body code {
+  background-color: #efecec;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.header .title {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.header {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.header .title::first-letter {
+  color: #fc4444;
+}
+
+.margin-top-60 {
+  margin-top: 60px;
+}
+
+ul.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 40px;
+}
+
+ul.menu li {
+  display: inline-block;
+}
+
+ul.menu li a {
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 500ms;
+  text-decoration: none;
+}
+
+ul.menu li a:hover {
+  color: #fc4444;
+}
+
+ul.menu li + li {
+  margin-left: 25px;
+}
+
+.progressbar {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  position: relative;
+  background-color: #f4f4f4;
+}
+.proggress {
+  height: 8px;
+  width: 10px;
+  background-color: #ff0;
+}
+.percentCount {
+  float: right;
+  margin-top: -42px;
+  clear: both;
+  font-weight: 700;
+  font-size: 13px;
+  color: #777777;
+}
