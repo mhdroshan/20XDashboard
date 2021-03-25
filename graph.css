@@ -138,7 +138,7 @@
   padding: 10px;
 }
 .progBar-holder h4 {
-  font-size: 27px;
+  font-size: 23px;
   font-weight: bold;
   margin: 20px auto 20px 10px;
 }
@@ -151,7 +151,7 @@
   margin-bottom: 0;
 }
 .progBar-collection {
-  margin: 40px ​auto 10px;
+  margin: 40px auto 10px auto;
   width: 100%;
 }
 .single-progressbar .title {
