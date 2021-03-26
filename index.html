@@ -32,7 +32,7 @@
     <style>
       body {
         box-sizing: border-box;
-        background-color: #eff5fe;
+        background-color: #eceff4;
         font-family: "Montserrat", sans-serif;
       }
       .menu-bar {
@@ -55,9 +55,10 @@
       }
       .box2-holder {
         height: 700px;
-    margin: auto;
+    margin: 20px auto;
     flex-direction: column;
     display: flex;
+    border-radius: 5px;
     width: 100%;
     background-color: white;
     max-width: 320px;
@@ -98,7 +99,7 @@
         margin: 10px auto;
         padding: 10px;
         border-radius: 8px;
-        border: 1px solid #80808038;
+        border: 1px solid #dfe4ed;
       }
       .boxData-title {
         float: left;
@@ -124,7 +125,7 @@
       .data-group {
         display: flex;
         flex-direction: column;
-        border: 1px solid #80808038;
+        border: 1px solid #dfe4ed;
         margin: 10px auto;
         width: 93%;
         border-radius: 8px;
@@ -340,7 +341,7 @@
                       <div class="c100 p5 small">
                         <span>5</span>
                         <div class="slice">
-                          <div class="bar"></div>
+                          <div class="bar color1"></div>
                           <div class="fill"></div>
                         </div>
                       </div>
@@ -399,7 +400,7 @@
                     <div class="c100 p56 small">
                       <span>56</span>
                       <div class="slice">
-                        <div class="bar color1"></div>
+                        <div class="bar "></div>
                         <div class="fill"></div>
                       </div>
                     </div>
@@ -419,7 +420,7 @@
                     <div class="c100 p56 small">
                       <span>56</span>
                       <div class="slice">
-                        <div class="bar color1"></div>
+                        <div class="bar "></div>
                         <div class="fill"></div>
                       </div>
                     </div>
@@ -570,27 +571,27 @@
 
         $(".data1").rProgressbar({
           percentage: 80,
-          fillBackgroundColor: "#1abc9c",
+          fillBackgroundColor: "#20364c",
         });
         $(".data2").rProgressbar({
           percentage: 90,
-          fillBackgroundColor: "#2ecc71",
+          fillBackgroundColor: "#20364c",
         });
 
         $(".data3").rProgressbar({
           percentage: 75,
-          fillBackgroundColor: "#9b59b6",
+          fillBackgroundColor: "#20364c",
         });
 
         $(".data4").rProgressbar({
           percentage: 65,
-          fillBackgroundColor: "#34495e",
+          fillBackgroundColor: "#20364c",
         });
 
         $(".data5").rProgressbar({
           percentage: 95,
-          fillBackgroundColor: "#f1c40f",
-          backgroundColor: "#e67e22",
+          fillBackgroundColor: "#20364c",
+          // backgroundColor: "#e67e22",
         });
       })(jQuery);
     </script>

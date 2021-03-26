@@ -42,7 +42,7 @@
 .single-progressbar {
   width: 60%;
   position: relative;
-  margin: 30px 15px 10px 0;
+  margin: 30px 15px 0 0;
 }
 .progBar-data {
   width: 100%;
