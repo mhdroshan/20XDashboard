@@ -7,6 +7,41 @@
 .bar-holder canvas {
   margin: 70px auto 10px;
 }
+
+.bar-holder {
+  width: 100%;
+  margin: 30px auto;
+  background-color: white;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+  margin: 30px ​auto;
+  position: relative;
+}
+.bar-holder h4 {
+  font-size: 23px;
+  font-weight: bold;
+  margin: 20px auto 20px 20px;
+}
+.barGraph-index {
+  margin: 20px auto;
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  display: flex;
+  flex-direction: row;
+}
+.barGraph-point {
+  width: 15px;
+  border-radius: 2px;
+  height: 15px;
+  margin: 0 0 0 20px;
+}
+.barGraph-index p {
+  margin: 0;
+  line-height: 15px;
+  margin-left: 5px;
+}
 /* linear progress bar */
 .progBar-holder {
   background-color: white;
@@ -19,7 +54,7 @@
 .progBar-holder h4 {
   font-size: 23px;
   font-weight: bold;
-  margin: 20px auto 20px 10px;
+  margin: 20px auto 20px 15px;
 }
 .progBar-top-right {
   color: #817d7d;
@@ -30,7 +65,7 @@
   margin-bottom: 0;
 }
 .progBar-collection {
-  margin: 40px auto 10px auto;
+  margin: 60px auto 10px auto;
   width: 100%;
 }
 .single-progressbar .title {
@@ -140,6 +175,13 @@ ul.menu li + li {
   color: #777777;
 }
 /* pie chart */
+#timesheet,
+#graph,
+#invoice {
+  width: 250px;
+  height: 250px;
+  margin: auto;
+}
 .color1 {
   border-color: #1ef592 !important;
 }
@@ -184,10 +226,10 @@ text tspan {
   line-height: 10px !important;
 }
 
-.pieChart-data h4 {
+.pieChart-holder h4 {
   font-size: 23px;
   font-weight: bold;
-  margin: 20px auto 20px 10px;
+  margin: 20px auto 20px 15px;
 }
 .pieChart-data {
   height: 100%;

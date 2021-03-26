@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- scripts -->
+   
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,8 +26,7 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-    <!-- scripts -->
-
+    
     <!-- css -->
     <link rel="stylesheet" href="circle.css" />
     <link rel="stylesheet" href="graph.css" />
@@ -130,41 +131,7 @@
         width: 93%;
         border-radius: 8px;
       }
-      /* bar graph */
-      .bar-holder {
-        width: 100%;
-        margin: 30px auto;
-        background-color: white;
-  border-radius: 5px;
-  font-family: "Poppins", sans-serif;
-  padding: 10px;
-  margin: 30px ​auto;
-  position: relative;
-      }
-      .bar-holder h4 {
-  font-size: 23px;
-  font-weight: bold;
-  margin: 20px auto 20px 10px;
-}
-.barGraph-index{
-  margin: 20px auto;
-    position: absolute;
-    right: 40px;
-    top: 40px;
-    display: flex;
-    flex-direction: row;
-}
-.barGraph-point{
-  width: 15px;
-  border-radius: 2px;
-  height: 15px;
-  margin: 0 0 0 20px;
-}
-.barGraph-index p{
-  margin: 0;
-    line-height: 15px;
-    margin-left: 5px;
-}
+ 
     </style>
   </head>
   <body>
@@ -181,10 +148,10 @@
               <!-- first piechart-->
               <div class="col-lg-6">
                 <div class="pieChart-holder">
-                  <div class="row">
-                  <div class="col-sm-5">
+                  <h4>Shift</h4>
+                  <div class="row m-auto h-100" style="min-height: 300px;">
+                  <div class="col-sm-5 m-auto">
                   <div class="pieChart-data ">
-                    <h4>Shift</h4>
                     <div class="pieChart-content">
                       <div style="background-color: #6E7C7C;" class="pie-point"></div>
                       <p>This week 26 ( 200 Hrs )</p>
@@ -218,10 +185,10 @@
               <!-- second pie chart -->
               <div class="col-lg-6">
                 <div class="pieChart-holder">
-                  <div class="row">
-                  <div class="col-sm-5">
+                  <h4>Invoice</h4>
+                  <div class="row m-auto h-100" style="min-height: 300px;">
+                  <div class="col-sm-5 m-auto">
                   <div class="pieChart-data ">
-                    <h4>Invoice</h4>
                     <div class="pieChart-content">
                       <div style="background-color: #855CF8;" class="pie-point"></div>
                       <p>Total Invoice</p>
@@ -445,7 +412,7 @@
            <!-- pie chart 3 -->
             <div class="row">
               <div class="col-lg-6">
-                <div class="col-sm-12 mx-auto">
+                <div class="mx-auto">
                   <div class="pieChart-holder">
                     <div class="progBar-top-right">Week</div>
                     
@@ -531,7 +498,7 @@
                     
                    
                       <div class="progBar-data">
-                        <p class="title">name 55</p>
+                        <p class="title">name 5</p>
                         <div class="single-progressbar">
                           <div class="data5"></div>
                         </div>
@@ -548,19 +515,19 @@
     </div>
 
     <!-- scripts -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.min.js"></script> -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
-        <script src="assets/morris.js"></script>
-        <script src="bar-graph.js"></script>
-        <script src="assets/bar-graph/Chart.min.js"></script>
-          <script src="assets/bar-graph/Chart.roundedBarCharts.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+        <script type="text/javascript" src="assets/morris.js"></script>
+        <script type="text/javascript" src="bar-graph.js"></script>
+        <script type="text/javascript" src="assets/bar-graph/Chart.min.js"></script>
+          <script type="text/javascript" src="assets/bar-graph/Chart.roundedBarCharts.js"></script>
     
       <!-- <script src="./assets/bar-graph/vendor.bundle.base.js"></script> -->
       <!-- prog bar -->
