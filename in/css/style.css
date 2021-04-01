@@ -9,6 +9,10 @@ body {
       font-size: 23px !important;
     }
   }
+  .card-hei{
+    min-height: 620px;
+    height: 100%;
+  }
 .card-title {
     font-family: "Montserrat", sans-serif;
     font-size: 27px;
