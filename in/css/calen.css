@@ -1,0 +1,126 @@
+.fc .fc-button-group button {
+  border: 1px solid #c1c1c1;
+  background: #ffffff;
+  box-shadow: none;
+  color: #3f51b5;
+  /* line-height: 40px; */
+  height: 35px;
+  border-radius: 5px;
+  margin: 0 3px;
+  transition: all 0.3s ease-in-out;
+  font-size: 15px;
+}
+.fc-scroller {
+  overflow-y: hidden !important;
+}
+.fc-icon {
+  color: #3f51b5;
+}
+.fc-content .fc-time {
+  display: none;
+}
+.fc-title .fa {
+  margin: 0px 4px;
+}
+
+.fc-event {
+  border-left: 5px solid;
+  color: white;
+  font-size: 11px;
+  padding: 2px;
+  border-radius: 3px;
+  background: #3f51b5;
+}
+.fc-content {
+  color: white;
+  padding: 2px 5px;
+}
+.col-md-3 .card {
+  background: #343f56;
+  height: 850px;
+}
+.col-md-3 .card .card-title {
+  margin-top: 50px;
+  text-decoration: underline;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.col-md-3 .card h5 {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: left;
+  margin: 30px auto;
+}
+.col-md-3 .card .card-text {
+  color: #ffffff;
+  font-size: 26px;
+  padding-left: 6px;
+  padding-top: 100px;
+}
+.col-md-3 .card .card-text span {
+  color: #ffffff;
+  font-size: 21px;
+  /*
+             padding-left: 30px;
+             padding-top: 100px;
+*/
+}
+
+.col-md-3 .card .event {
+  color: #ffffff;
+  font-size: 20px;
+  text-align: left;
+  margin-top: 28px;
+  font-weight: 400;
+}
+
+.col-md-3,
+.col-md-9 {
+  float: left;
+}
+.add-icon {
+  background: url(../plus.png);
+  background-size: cover;
+  background-position: center;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -10px;
+  width: 20px;
+  cursor: pointer;
+  margin-top: -10px;
+  opacity: 0.1;
+  transition: 0.2s ease;
+}
+.fc-day:hover .add-icon {
+  opacity: 1;
+  transform: scale(1.09);
+}
+.fc-day {
+  position: relative;
+  cursor: pointer;
+  z-index: 5;
+}
+.fc-day-number {
+  /* color: #a9aaae; */
+  margin: 4px !important;
+  color: #051692;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+table {
+  border: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .col-md-3 .card {
+    background: #343f56;
+    height: 500px;
+  }
+  .col-md-9 {
+    margin-top: 20px;
+  }
+}

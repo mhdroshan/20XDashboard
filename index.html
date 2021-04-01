@@ -1,512 +1,438 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- scripts -->
-   
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard design</title>
-
-    <!-- fonts -->
+    <title>Dashboard</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- bootstrap -->
+    <!-- font awsome -->
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    
-    <!-- css -->
-    <link rel="stylesheet" href="circle.css" />
-    <link rel="stylesheet" href="graph.css" />
-    <style>
-      body {
-        box-sizing: border-box;
-        background-color: #eceff4;
-        font-family: "Montserrat", sans-serif;
-      }
-      .menu-bar {
-        width: 100%;
-        height: 90vh;
-        border-radius: 5px;
-        margin: 5% auto;
-        box-shadow: 0px 0px 14px 0px rgb(142 137 137 / 44%);
-        background-color: white;
-        text-align: center;
-      }
-
-      /* dashboard */
-      .dash-holder {
-        margin: 2% auto;
-        padding: 3px;
-        /* width: 100%; */
-        height: 100%;
-        position: relative;
-      }
-      .box2-holder {
-        height: 700px;
-    margin: 20px auto;
-    flex-direction: column;
-    display: flex;
-    border-radius: 5px;
-    width: 100%;
-    background-color: white;
-    max-width: 320px;
-      }
-      .box2-top {
-        position: relative;
-        margin: 2px;
-      }
-      .box2-head {
-        margin: 22px 12px;
-        float: left;
-        font-weight: 700;
-        color: black;
-        font-size: 18px;
-      }
-      .viewAll-buttton {
-        float: right;
-        margin: 16px 12px;
-        padding: 7px 13px;
-        border-radius: 40px;
-        cursor: pointer;
-        color: white;
-        border: 1px solid white;
-        font-size: 12px;
-        font-weight: 500;
-        transition: 0.3s ease;
-        background: linear-gradient(90deg, #2af598 0%, #009efd 100%);
-      }
-      .viewAll-buttton:hover {
-        background: white;
-        color: #009efd;
-        border: 1px solid #009efd;
-      }
-
-      .box2-data {
-        height: 80px;
-        width: 93%;
-        margin: 10px auto;
-        padding: 10px;
-        border-radius: 8px;
-        border: 1px solid #dfe4ed;
-      }
-      .boxData-title {
-        float: left;
-        font-weight: 500;
-        font-size: 16px;
-        margin-bottom: 0px;
-        line-height: 64px;
-      }
-      .data-group h5 {
-        font-size: 22px;
-        font-weight: 600;
-      }
-      .data-group .box2-data {
-        border: 0;
-      }
-      .data-group h5 {
-        margin: 16px auto 5px 10px;
-        float: left;
-        font-weight: 600;
-        color: black;
-        font-size: 17px;
-      }
-      .data-group {
-        display: flex;
-        flex-direction: column;
-        border: 1px solid #dfe4ed;
-        margin: 10px auto;
-        width: 93%;
-        border-radius: 8px;
-      }
- 
-    </style>
+    <link
+      rel="stylesheet"
+      href="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.css"
+    />
+    <link
+      href="http://www.jqueryscript.net/css/jquerysctipttop.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./in/css/fullcalendar.css" />
+    <link href="in/css/calen.css" rel="stylesheet" />
+    <link href="in/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="in/css/style.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="in/css/example.css" />
+    <link rel="stylesheet" href="in/css/morris.css" />
+    <link rel="stylesheet" href="in/css/roundbar.css" />
+    <link
+      href="http://www.jqueryscript.net/css/jquerysctipttop.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="jquery.lineProgressbar.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+    <!--
+<section class="data-row">
+    
+</section>
+-->
     <div class="container-fluid">
       <div class="row">
-        <!-- <div class="col-sm-3">
-          <div class="menu-bar">MENU</div>
-        </div> -->
-
-        <!-- Dashboard -->
-        <div class="container-fluid">
-          <div class="dash-holder">
-            <div class="row">
-              <!-- first piechart-->
-              <div class="col-lg-6">
-                <div class="pieChart-holder">
-                  <h4>Shift</h4>
-                  <div class="row m-auto h-100" style="min-height: 300px;">
-                  <div class="col-sm-5 m-auto">
-                  <div class="pieChart-data ">
-                    <div class="pieChart-content">
-                      <div style="background-color: #6E7C7C;" class="pie-point"></div>
-                      <p>This week 26 ( 200 Hrs )</p>
-                    </div>
-                    <div class="pieChart-content">
-                      <div style="background-color: #435560;" class="pie-point"></div>
-                      <p>This month 275 (2400 Hrs)</p>
-                    </div>
-                    <div class="pieChart-content">
-                      <div style="background-color: #435560;" class="pie-point"></div>
-                      <p>Open Shifts 17 (120 Hrs)</p>
-                    </div>
-                    <div class="pieChart-content">
-                      <div style="background-color: #92967D;" class="pie-point"></div>
-                      <p>Unpublished Shifts 28 (160 Hrs)</p>
-                    </div>
-                    <div class="pieChart-content">
-                      <div style="background-color: #000000;" class="pie-point"></div>
-                      <p>Ongoing Shifts</p>
-                    </div>
-                  </div>
-                </div>
-                  <div class="col-sm-7 mx-auto">
-                    
-                  <div id="graph" ></div>
-                </div>
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Shift</h5>
+              <div class="col-md-12">
+                <div id="graph"></div>
               </div>
+              <div class="col-md-12">
+                <div class="col-6 col-sm-6 col-md-6">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <div class="avatar-circle"></div>
+                      <div class="text-field">
+                        <p>
+                          This week 26 <br />
+                          ( 200 Hrs )
+                        </p>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="avatar-circle1"></div>
+                      <div class="text-field">
+                        <p>
+                          This month 275 <br />
+                          (2400 Hrs)
+                        </p>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="avatar-circle2"></div>
+                      <div class="text-field">
+                        <p>
+                          Open Shifts 17 <br />
+                          (120 Hrs)
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-              </div>
-
-              <!-- second pie chart -->
-              <div class="col-lg-6">
-                <div class="pieChart-holder">
-                  <h4>Invoice</h4>
-                  <div class="row m-auto h-100" style="min-height: 300px;">
-                  <div class="col-sm-5 m-auto">
-                  <div class="pieChart-data ">
-                    <div class="pieChart-content">
-                      <div style="background-color: #855CF8;" class="pie-point"></div>
-                      <p>Total Invoice</p>
-                    </div>
-                    <div class="pieChart-content">
-                      <div style="background-color: #B085FF;" class="pie-point"></div>
-                      <p>
-                        Over Due</p>
-                    </div>
-                    <div class="pieChart-content">
-                      <div style="background-color: #503795;" class="pie-point"></div>
-                      <p>Ready to Invoice</p>
-                    </div>
-                    <div class="pieChart-content">
-                      <div style="background-color: #FF0505;" class="pie-point"></div>
-                      <p>Homes Ready to Invoice</p>
-                    </div>
-                   
-                  </div>
-                </div>
-                  <div class="col-sm-7 mx-auto">
-                  <div id="invoice" ></div>
-                </div>
-              </div>
-                </div>
-              </div>
-
-
-            </div>
-
-
-
-            <div class="row">
-              <div class="col-lg-4 p-0">
-                <div class="box2-holder"><div class="box2-top">
-                  <h4 class="box2-head">Recruitment</h4>
-                  <div class="viewAll-buttton">View all</div>
-                </div>
-                <!-- data 1 -->
-                <div class="box2-data">
-                  <p class="boxData-title">Top candidate</p>
-                  <div class="c100 p12 small">
-                    <span>12</span>
-                    <div class="slice">
-                      <div class="bar color2"></div>
-                      <div class="fill"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="data-group">
-                  <h5>New registrations</h5>
-
-                  <!-- data 2 -->
-                  <div class="box2-data">
-                    <p class="boxData-title">Top candidate</p>
-                    <div class="c100 p50 small">
-                      <span>50</span>
-                      <div class="slice">
-                        <div class="bar color1"></div>
-                        <div class="fill"></div>
+                <div class="col-6 col-sm-6 col-md-6">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <div class="avatar-circle3"></div>
+                      <div class="text-field">
+                        <p>
+                          Unpublished Shifts <br />
+                          28 (160 Hrs)
+                        </p>
                       </div>
-                    </div>
-                  </div>
-                  <!-- data 3 -->
-                  <div class="box2-data">
-                    <p class="boxData-title">Top candidate</p>
-                    <div class="c100 p20 small">
-                      <span>20</span>
-                      <div class="slice">
-                        <div class="bar"></div>
-                        <div class="fill"></div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="avatar-circle4"></div>
+                      <div class="text-field">
+                        <p id="av4">Ongoing Shifts</p>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- group 2 -->
-                <div class="data-group">
-                  <h5>Staff action</h5>
-
-                  <!-- data 4 -->
-                  <div class="box2-data">
-                    <p class="boxData-title">This week</p>
-                    <div class="c100 p88 small">
-                      <span>88</span>
-                      <div class="slice">
-                        <div class="bar"></div>
-                        <div class="fill"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- data 5 -->
-                  <div class="box2-data">
-                    <p class="boxData-title">This month</p>
-                    <div class="c100 p73 small">
-                      <span>73</span>
-                      <div class="slice">
-                        <div class="bar"></div>
-                        <div class="fill"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div></div>
-              </div>
-              <div class="col-lg-4 p-0">
-                <div class="box2-holder">
-                  <div class="box2-top">
-                    <h4 class="box2-head">Staff</h4>
-                    <div class="viewAll-buttton">View all</div>
-                  </div>
-                  <!-- data 1 -->
-                  <div class="data-group">
-                    <h5>Complaince Warning</h5>
-
-                    <!-- data 2 -->
-                    <div class="box2-data">
-                      <p class="boxData-title">Due</p>
-                      <div class="c100 p5 small">
-                        <span>5</span>
-                        <div class="slice">
-                          <div class="bar color1"></div>
-                          <div class="fill"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- data 3 -->
-                    <div class="box2-data">
-                      <p class="boxData-title">Expired</p>
-                      <div class="c100 p8 small">
-                        <span>8</span>
-                        <div class="slice">
-                          <div class="bar color2"></div>
-                          <div class="fill"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- group 2 -->
-                  <div class="data-group">
-                    <h5>Complaince Warning</h5>
-
-                    <!-- data 4 -->
-                    <div class="box2-data">
-                      <p class="boxData-title">Staff on holiday</p>
-                      <div class="c100 p0 small">
-                        <span>0</span>
-                        <div class="slice">
-                          <div class="bar"></div>
-                          <div class="fill"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- data 5 -->
-                    <div class="box2-data">
-                      <p class="boxData-title">Non-compliant staff</p>
-                      <div class="c100 p0 small">
-                        <span>0</span>
-                        <div class="slice">
-                          <div class="bar"></div>
-                          <div class="fill"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 p-0">
-                <div class="box2-holder">
-                  <div class="box2-top">
-                    <h4 class="box2-head">Clients</h4>
-                    <div class="viewAll-buttton">View all</div>
-                  </div>
-                  <!-- data 1 -->
-                  <div class="box2-data">
-                    <p class="boxData-title">Booked Shift Week</p>
-                    <div class="c100 p56 small">
-                      <span>56</span>
-                      <div class="slice">
-                        <div class="bar "></div>
-                        <div class="fill"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="box2-data">
-                    <p class="boxData-title">Cancelled Shift</p>
-                    <div class="c100 p12 small">
-                      <span>12</span>
-                      <div class="slice">
-                        <div class="bar color1"></div>
-                        <div class="fill"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="box2-data">
-                    <p class="boxData-title">Inactive This Month</p>
-                    <div class="c100 p56 small">
-                      <span>56</span>
-                      <div class="slice">
-                        <div class="bar "></div>
-                        <div class="fill"></div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
-            <!-- bar graph -->
-            <div class="bar-holder">
-<div class="barGraph-index">
-<div class="barGraph-point" style="background-color: #B4AEE8;"></div>
-<p>Month</p>
-
-<div class="barGraph-point" style="background-color: #283975;"></div>
-<p>Week</p>
-</div>
-              <h4>Monthly Invoice/ Shift Data</h4>
-              <canvas id="sales-chart"></canvas></div>
-
-           <!-- pie chart 3 -->
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="mx-auto">
-                  <div class="pieChart-holder">
-                    <div class="progBar-top-right">Week</div>
-                    
-                      <h4 class="pieChart-v-title">Shift</h4>
-                      
-                  <div id="timesheet"></div>
-                  <div class="pieChart-v-contents row">
-                    <div class="col-sm-6">
-                      <div class="pieChart-v-data">
-                        <div class="pieChart-v-point" style="background-color: #440a67;">
-                          70
-                        </div>
-                        <p>Total Time Sheet</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Invoice</h5>
+              <div class="col-md-12">
+                <div id="invo"></div>
+              </div>
+              <div class="col-md-12">
+                <div class="col-6 col-sm-6 col-md-6">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <div class="avatar-circle6"></div>
+                      <div class="text-field">
+                        <p style="margin-top: 14px">Total Invoice</p>
                       </div>
-                      <div class="pieChart-v-data">
-                        <div class="pieChart-v-point" style="background-color: #93329E;">
-                          30
-                        </div>
-                        <p>Signed off</p>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="avatar-circle7"></div>
+                      <div class="text-field">
+                        <p style="margin-top: 14px">Over Due</p>
                       </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <div class="avatar-circle8"></div>
+                      <div class="text-field">
+                        <p style="margin-top: 14px">Ready to Invoice</p>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="avatar-circle9"></div>
+                      <div class="text-field">
+                        <p id="av9">Homes Ready to Invoice</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Time Sheet</h5>
+              <div class="col-md-12">
+                <div id="timeg"></div>
+              </div>
+              <div class="col-md-12">
+                <div class="col-6 col-sm-6 col-md-6">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <div class="avatar-circle10"></div>
+                      <div class="text-field">
+                        <p style="margin-top: 14px">Total Invoice</p>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="avatar-circle11"></div>
+                      <div class="text-field">
+                        <p style="margin-top: 14px">Over Due</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <div class="avatar-circle12"></div>
+                      <div class="text-field">
+                        <p style="margin-top: 14px">Ready to Invoice</p>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="avatar-circle13"></div>
+                      <div class="text-field">
+                        <p id="av13">Homes Ready to Invoice</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--calendar-->
+      <div class="row">
+        <div
+          class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5"
+          id="top-widget"
+        >
+          <div class="card" style="height: 600px !important">
+            <div class="card-body">
+              <h5 class="card-title"><h4 class="second-title">Widget</h4></h5>
+              <div class="week">Week</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7" id="event-cal">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"></h5>
+              <div class="col-md-12">
+                <div id="calendar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Second Row-->
+      <div class="row">
+        <div class="col-md-6 col-lg-6 col-xl-4" id="recritment">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">
+                <h4 class="second-title">Recruitment</h4>
+              </h5>
+              <button class="gradient-button">View All</button>
+              <div class="col-md-12" id="data-card2">
+                <h6>New Registration</h6>
+                <div class="col-9">This Week</div>
+                <div class="col-3">
+                  <div class="circle_percent1" data-percent="20">
+                    <div class="circle_inner1">
+                      <div class="round_per1"></div>
                     </div>
-                    <div class="col-sm-6">
-                      
-                        <div class="pieChart-v-data">
-                          <div class="pieChart-v-point" style="background-color: #b4aee8;">
-                            52
-                          </div>
-                          <p>Pending sign off
-
-                          </p>
-                        </div>
-                        <div class="pieChart-v-data">
-                          <div class="pieChart-v-point" style="background-color: #FFE3FE;">
-                            52
-                          </div>
-                          <p>Pending submission</p>
-                        </div>
-                      </div>
-                    </div>
-                    
                   </div>
                 </div>
+                <div class="col-9">This Month</div>
+                <div class="col-3">
+                  <div class="circle_percent2" data-percent="85">
+                    <div class="circle_inner2">
+                      <div class="round_per2"></div>
+                    </div>
+                  </div>
                 </div>
-
-              
-               <!-- linear progress bar -->
-              <div class="col-lg-6">
-                <div class="progBar-holder">
-                  <p class="progBar-top-right">Week</p>
-                  <h4>Top 5 candidates</h4>
-                  
-                  <div class="progBar-collection">
-                    <div class="progBar-data">
-                      <p class="title">Name 1</p>
-                      <div class="single-progressbar">
-                        <div class="data1"></div>
-                      </div>
-                    </div>
-                 
-                    
-                      <div class="progBar-data">
-                        <p class="title">name 2</p>
-                        <div class="single-progressbar">
-                          <div class="data2"></div>
-                        </div>
-                      </div>
-                   
-                   
-                      <div class="progBar-data">
-                        <p class="title">name 3</p>
-                        <div class="single-progressbar">
-                          <div class="data3"></div>
-                        </div>
-                      </div>
-                    
-                   
-                      <div class="progBar-data">
-                        <p class="title">name 4</p>
-                        <div class="single-progressbar">
-                          <div class="data4"></div>
-                        </div>
-                      </div>
-                    
-                   
-                      <div class="progBar-data">
-                        <p class="title">name 5</p>
-                        <div class="single-progressbar">
-                          <div class="data5"></div>
-                        </div>
-                      </div>
-                    </div>
               </div>
+
+              <div class="col-md-12" id="data-card3">
+                <h6>Staff Action</h6>
+                <div class="col-9">This Week</div>
+                <div class="col-3">
+                  <div class="circle_percent1" data-percent="20">
+                    <div class="circle_inner1">
+                      <div class="round_per1"></div>
+                    </div>
+                  </div>
                 </div>
+                <div class="col-9">This Month</div>
+                <div class="col-3">
+                  <div class="circle_percent2" data-percent="85">
+                    <div class="circle_inner2">
+                      <div class="round_per2"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6 col-xl-4" id="staff">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><h4 class="second-title">Staff</h4></h5>
+              <button class="gradient-button">View All</button>
+              <div class="col-md-12" id="data-card2">
+                <h6>Complaince Warning</h6>
+                <div class="col-9">Due</div>
+                <div class="col-3">
+                  <div class="circle_percent6" data-percent="5">
+                    <div class="circle_inner6">
+                      <div class="round_per6"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-9">Expaired</div>
+                <div class="col-3">
+                  <div class="circle_percent7" data-percent="8">
+                    <div class="circle_inner7">
+                      <div class="round_per7"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-12" id="data-card3">
+                <h6>Complaince</h6>
+                <div class="col-9">Staff On Holiday</div>
+                <div class="col-3">
+                  <div class="circle_percent8" data-percent="0">
+                    <div class="circle_inner8">
+                      <div class="round_per8"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-9">Top candidate</div>
+                <div class="col-3">
+                  <div class="circle_percent9" data-percent="0">
+                    <div class="circle_inner9">
+                      <div class="round_per9"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-xl-4" id="client">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><h4 class="second-title">Client</h4></h5>
+              <button class="gradient-button">View All</button>
+              <div class="col-md-12" id="data-card6">
+                <div class="col-9">Booked Shift Week</div>
+                <div class="col-3">
+                  <div class="circle_percent10" data-percent="56">
+                    <div class="circle_inner10">
+                      <div class="round_per10"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12" id="data-card7">
+                <div class="col-9">Cancelled Shift</div>
+                <div class="col-3">
+                  <div class="circle_percent11" data-percent="56">
+                    <div class="circle_inner11">
+                      <div class="round_per11"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12" id="data-card8">
+                <div class="col-9">Inactive This Month</div>
+                <div class="col-3">
+                  <div class="circle_percent12" data-percent="56">
+                    <div class="circle_inner12">
+                      <div class="round_per12"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Third Row-->
+      <div class="row">
+        <div
+          class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5"
+          id="top-candid"
+        >
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">
+                <h4 class="second-title">Top Candidate</h4>
+              </h5>
+              <div class="week">Week</div>
+              <div class="container" id="top-container">
+                <div class="row">
+                  <div class="col-md-12" id="pbar">
+                    <div class="col-md-3 col-lg-12 col-xl-3">Name1</div>
+                    <div class="col-md-9 col-lg-12 col-xl-9">
+                      <div id="jq"></div>
+                    </div>
+                    <div class="col-md-3 col-lg-12 col-xl-3">Name2</div>
+                    <div class="col-md-9 col-lg-12 col-xl-9">
+                      <div id="jq1"></div>
+                    </div>
+                    <div class="col-md-3 col-lg-12 col-xl-3">Name3</div>
+                    <div class="col-md-9 col-lg-12 col-xl-9">
+                      <div id="jq2"></div>
+                    </div>
+                    <div class="col-md-3 col-lg-12 col-xl-3">Name4</div>
+                    <div class="col-md-9 col-lg-12 col-xl-9">
+                      <div id="jq3"></div>
+                    </div>
+                    <div class="col-md-3 col-lg-12 col-xl-3">Name5</div>
+                    <div class="col-md-9 col-lg-12 col-xl-9">
+                      <div id="jq4"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7"
+          id="month-invoice"
+        >
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">
+                <h4 class="second-title">Monthly Invoice / Shift Data</h4>
+              </h5>
+              <div class="col-5">
+                <ul>
+                  <li>
+                    <div class="text-field">
+                      <p>Shift</p>
+                    </div>
+                    <div class="invoice-rectangle"></div>
+                  </li>
+                  <li>
+                    <div class="text-field">
+                      <p>Month</p>
+                    </div>
+                    <div class="invoice-rectangle1"></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-11">
+                <canvas id="sales-chart"></canvas>
               </div>
             </div>
           </div>
@@ -514,65 +440,73 @@
       </div>
     </div>
 
-    <!-- scripts -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./assets/morris-rafael.js"></script>
-    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
-    <!-- <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script> -->
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.min.js"></script> -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
-        <script type="text/javascript" src="./assets/morris.js"></script>
-        <script type="text/javascript" src="./bar-graph.js"></script>
-        <script type="text/javascript" src="./assets/bar-graph/Chart.min.js"></script>
-          <script type="text/javascript" src="./assets/bar-graph/Chart.roundedBarCharts.js"></script>
-    
-      <!-- <script src="./assets/bar-graph/vendor.bundle.base.js"></script> -->
-      <!-- prog bar -->
-      <script src="./prog-bar.js"></script>
-    <script>
-      (function ($) {
-        "use strict";
+    <!--  script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-        $(".data1").rProgressbar({
-          percentage: 80,
-          fillBackgroundColor: "#20364c",
-        });
-        $(".data2").rProgressbar({
-          percentage: 90,
-          fillBackgroundColor: "#20364c",
-        });
+    <script src="in/js/raphel.js"></script>
+    <script src="in/js/morris.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.js"></script>
+    <script src="in/js/example.js"></script>
 
-        $(".data3").rProgressbar({
-          percentage: 75,
-          fillBackgroundColor: "#20364c",
-        });
+    <!-- plugins:js -->
+    <script src="in/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="in/js/Chart.min.js"></script>
+    <!-- Custom js for this page-->
+    <script src="in/js/dashboard.js"></script>
+    <script src="in/js/Chart.roundedBarCharts.js"></script>
+    <!-- End custom js for this page-->
+    <script src="in/js/progressbar.js"></script>
+    <!-- <script src="assets/js/jquery.lineProgressbar.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="jquery.lineProgressbar.js"></script>
 
-        $(".data4").rProgressbar({
-          percentage: 65,
-          fillBackgroundColor: "#20364c",
-        });
-
-        $(".data5").rProgressbar({
-          percentage: 95,
-          fillBackgroundColor: "#20364c",
-          // backgroundColor: "#e67e22",
-        });
-      })(jQuery);
-    </script>
-<!-- pie chart -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+    <script src="in/js/script.js"></script>
+  </body>
+</html>
+<script>
+  $("#jq").LineProgressbar({
+    percentage: 80,
+    radius: "15px",
+    height: "20px",
+  });
+  $("#jq1").LineProgressbar({
+    percentage: 70,
+    radius: "15px",
+    height: "20px",
+  });
+  $("#jq2").LineProgressbar({
+    percentage: 55,
+    radius: "15px",
+    height: "20px",
+  });
+  $("#jq3").LineProgressbar({
+    percentage: 69,
+    radius: "15px",
+    height: "20px",
+  });
+  $("#jq4").LineProgressbar({
+    percentage: 30,
+    radius: "15px",
+    height: "20px",
+  });
+</script>
 <script>
   Morris.Donut({
     element: "graph",
     resize: true,
     colors: [
-      "#000000",
-      "#435560",
       "#6E7C7C",
+      "#435560",
       "#C8C6A7",
       "#92967D",
+      "#000000",
       "#00BCD4",
       "#00ACC1",
       "#0097A7",
@@ -587,7 +521,6 @@
       { value: 28, label: "Unpublished Shifts 28 (160 Hrs)" },
       { value: 1, label: "Ongoing Shifts" },
     ],
-    resize: true,
     formatter: function (x) {
       return x + "";
     },
@@ -595,16 +528,16 @@
     console.log(i, row);
   });
 </script>
-<!-- pie chart 2 -->
+
 <script>
   Morris.Donut({
-    element: "invoice",
+    element: "invo",
     resize: true,
     colors: [
       "#855CF8",
+      "#FF0505",
       "#B085FF",
       "#503795",
-      "#FF0505",
       "#FF0505",
       "#00BCD4",
       "#00ACC1",
@@ -626,10 +559,10 @@
     console.log(i, row);
   });
 </script>
-<!-- pie chart 3 -->
+
 <script>
   Morris.Donut({
-    element: "timesheet",
+    element: "timeg",
     resize: true,
     colors: [
       "#440A67",
@@ -658,9 +591,8 @@
   });
 </script>
 
-
-<!-- bar graph -->
-
-    
-  </body>
-</html>
+<script>
+  $(document).ready(function () {
+    $(".fc-day").append("<div class='add-icon'> </div>");
+  });
+</script>
