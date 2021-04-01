@@ -1,8 +1,31 @@
 body {
     background: #f9f9f9;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
 }
-
+/* pie-chart changed */
+.pie-point{
+    width: 18px;
+    height: 18px;
+    margin: 10px 5px;
+    float: left;
+    padding: 10px;
+    /* margin-left: 20px; */
+    border-radius: 50%;
+}
+.dis-flex{
+    display: flex;
+    /* min-width: 220px; */
+    width: 100%;
+    max-height: 55px;
+    height: 100%;
+    margin: 15px;
+}
+.dis-flex p{
+    margin: 10px;
+    float: right;
+    font-size: 16px;
+}
 /* media query */
 @media screen and (max-width: 420px) {
     .second-title {
@@ -14,18 +37,18 @@ body {
     height: 100%;
   }
 .card-title {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 27px;
     font-weight: bold;
 }
 .second-title {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 27px;
     font-weight: bold;
     margin-top: 30px;
 }
 p {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: medium;
     color: #484545;
@@ -216,22 +239,22 @@ p {
 }
 #recritment .card .card-body .col-md-12 h6 {
     font-size: 23px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 #recritment .card .card-body .col-md-12 .col-9 {
     float: left;
     font-size: 21px;
     color: #414040;
     font-weight: medium;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 #recritment .card .card-body .col-md-12 .col-3 {
     font-size: 23px;
     font-weight: 600px;
     float: left;
     color: #414040;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 #recritment .card, #staff .card, #client .card{
     margin-top: 20px;
@@ -257,22 +280,22 @@ p {
 }
 #staff .card .card-body .col-md-12 h6 {
     font-size: 23px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 #staff .card .card-body .col-md-12 .col-9 {
     float: left;
     font-size: 21px;
     color: #414040;
     font-weight: medium;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 #staff .card .card-body .col-md-12 .col-3 {
     font-size: 23px;
     font-weight: 600px;
     float: left;
     color: #414040;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 #client .card .card-body .gradient-button {
     width: 140px;
@@ -295,7 +318,7 @@ p {
 }
 #client .card .card-body .col-md-12 h6 {
     font-size: 23px;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
 #client .card .card-body .col-md-12 .col-9 {
@@ -303,14 +326,14 @@ p {
     font-size: 21px;
     color: #414040;
     font-weight: medium;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 #client .card .card-body .col-md-12 .col-3 {
     font-size: 23px;
     font-weight: 600px;
     float: left;
     color: #414040;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 #data-card2 {

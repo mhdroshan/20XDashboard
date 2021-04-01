@@ -11,8 +11,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <!-- font awsome -->
@@ -58,19 +63,54 @@
               <div class="col-md-12">
                 <div id="graph"></div>
               </div>
-              <div class="col-md-12">
-                <div class="col-6 col-sm-6 col-md-6">
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <div class="avatar-circle"></div>
-                      <div class="text-field">
-                        <p>
-                          This week 26 <br />
-                          ( 200 Hrs )
-                        </p>
-                      </div>
-                    </li>
-                    <!-- <li class="list-group-item">
+              <div class="col-md-12 my-4">
+                <div class="row">
+                  <div class="col-sm-6 p-1">
+                    <div class="dis-flex">
+                      <div
+                        style="background-color: #6e7c7c"
+                        class="pie-point"
+                      ></div>
+                      <p>This week 26 ( 200 Hrs )</p>
+                    </div>
+                    <div class="dis-flex">
+                      <div
+                        style="background-color: #435560"
+                        class="pie-point"
+                      ></div>
+                      <p>Open Shifts 17 (120 Hrs)</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 p-1">
+                    <div class="dis-flex">
+                      <div
+                        style="background-color: #92967d"
+                        class="pie-point"
+                      ></div>
+                      <p>Unpublished Shifts 28 (160 Hrs)</p>
+                    </div>
+                    <div class="dis-flex">
+                      <div
+                        style="background-color: #000000"
+                        class="pie-point"
+                      ></div>
+                      <p>Ongoing Shifts</p>
+                    </div>
+                  </div>
+                  <!--<div class="col-6 col-sm-6 col-md-6">
+
+                    
+                     <ul class="list-group">
+                      <li class="list-group-item">
+                        <div class="avatar-circle"></div>
+                        <div class="text-field">
+                          <p>
+                            This week 26 <br />
+                            ( 200 Hrs )
+                          </p>
+                        </div>
+                      </li>
+                       <li class="list-group-item">
                       <div class="avatar-circle1"></div>
                       <div class="text-field">
                         <p>
@@ -78,37 +118,38 @@
                           (2400 Hrs)
                         </p>
                       </div>
-                    </li> -->
-                    <li class="list-group-item">
-                      <div class="avatar-circle2"></div>
-                      <div class="text-field">
-                        <p>
-                          Open Shifts 17 <br />
-                          (120 Hrs)
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-6 col-sm-6 col-md-6">
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <div class="avatar-circle3"></div>
-                      <div class="text-field">
-                        <p>
-                          Unpublished Shifts <br />
-                          28 (160 Hrs)
-                        </p>
-                      </div>
-                    </li>
-                    <li class="list-group-item">
-                      <div class="avatar-circle4"></div>
-                      <div class="text-field">
-                        <p id="av4">Ongoing Shifts</p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
+                    </li> 
+                      <li class="list-group-item">
+                        <div class="avatar-circle2"></div>
+                        <div class="text-field">
+                          <p>
+                            Open Shifts 17 <br />
+                            (120 Hrs)
+                          </p>
+                        </div>
+                      </li>
+                    </ul> 
+                  </div>
+                  <div class="col-6 col-sm-6 col-md-6">
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <div class="avatar-circle3"></div>
+                        <div class="text-field">
+                          <p>
+                            Unpublished Shifts <br />
+                            28 (160 Hrs)
+                          </p>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="avatar-circle4"></div>
+                        <div class="text-field">
+                          <p id="av4">Ongoing Shifts</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                --></div>
               </div>
             </div>
           </div>
@@ -120,38 +161,40 @@
               <div class="col-md-12">
                 <div id="invo"></div>
               </div>
-              <div class="col-md-12">
-                <div class="col-6 col-sm-6 col-md-6">
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <div class="avatar-circle6"></div>
-                      <div class="text-field">
-                        <p style="margin-top: 14px">Total Invoice</p>
-                      </div>
-                    </li>
-                    <li class="list-group-item">
-                      <div class="avatar-circle7"></div>
-                      <div class="text-field">
-                        <p style="margin-top: 14px">Over Due</p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-6 col-sm-6 col-md-6">
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <div class="avatar-circle8"></div>
-                      <div class="text-field">
-                        <p style="margin-top: 14px">Ready to Invoice</p>
-                      </div>
-                    </li>
-                    <li class="list-group-item">
-                      <div class="avatar-circle9"></div>
-                      <div class="text-field">
-                        <p id="av9">Homes Ready to Invoice</p>
-                      </div>
-                    </li>
-                  </ul>
+              <div class="col-md-12 my-4">
+                <div class="row">
+                  <div class="col-sm-6 p-1">
+                    <div class="dis-flex">
+                      <div
+                        style="background-color: #855cf8"
+                        class="pie-point"
+                      ></div>
+                      <p>Total Invoice</p>
+                    </div>
+                    <div class="dis-flex">
+                      <div
+                        style="background-color: #ff0505"
+                        class="pie-point"
+                      ></div>
+                      <p>Over Due</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 p-1">
+                    <div class="dis-flex">
+                      <div
+                        style="background-color: #5822f5"
+                        class="pie-point"
+                      ></div>
+                      <p>Ready to Invoice</p>
+                    </div>
+                    <div class="dis-flex">
+                      <div
+                        style="background-color: #a07fff"
+                        class="pie-point"
+                      ></div>
+                      <p>Homes Ready to Invoice</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -164,38 +207,40 @@
               <div class="col-md-12">
                 <div id="timeg"></div>
               </div>
-              <div class="col-md-12">
-                <div class="col-6 col-sm-6 col-md-6">
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <div class="avatar-circle10"></div>
-                      <div class="text-field">
-                        <p style="margin-top: 14px">Total Invoice</p>
-                      </div>
-                    </li>
-                    <li class="list-group-item">
-                      <div class="avatar-circle11"></div>
-                      <div class="text-field">
-                        <p style="margin-top: 14px">Over Due</p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-6 col-sm-6 col-md-6">
-                  <ul class="list-group">
-                    <li class="list-group-item">
-                      <div class="avatar-circle12"></div>
-                      <div class="text-field">
-                        <p style="margin-top: 14px">Ready to Invoice</p>
-                      </div>
-                    </li>
-                    <li class="list-group-item">
-                      <div class="avatar-circle13"></div>
-                      <div class="text-field">
-                        <p id="av13">Homes Ready to Invoice</p>
-                      </div>
-                    </li>
-                  </ul>
+              <div class="col-md-12 my-4">
+                <div class="row">
+                  <div class="col-sm-6 p-1">
+                    <div class="dis-flex">
+                      <div
+                        style="background-color: #440a67"
+                        class="pie-point"
+                      ></div>
+                      <p>Total Time Sheet</p>
+                    </div>
+                    <div class="dis-flex">
+                      <div
+                        style="background-color: #93329e"
+                        class="pie-point"
+                      ></div>
+                      <p>Signed Off</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 p-1">
+                    <div class="dis-flex">
+                      <div
+                        style="background-color: #b4aee8"
+                        class="pie-point"
+                      ></div>
+                      <p>Pending Sign Off</p>
+                    </div>
+                    <div class="dis-flex">
+                      <div
+                        style="background-color: #ffe3fe"
+                        class="pie-point"
+                      ></div>
+                      <p>Pending Submittion</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -316,7 +361,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-9">Top candidate</div>
+                <div class="col-9">Top 5 candidate</div>
                 <div class="col-3">
                   <div class="circle_percent9" data-percent="0">
                     <div class="circle_inner9">
@@ -477,27 +522,27 @@
   $("#jq").LineProgressbar({
     percentage: 80,
     radius: "15px",
-    height: "20px",
+    height: "18px",
   });
   $("#jq1").LineProgressbar({
     percentage: 70,
     radius: "15px",
-    height: "20px",
+    height: "18px",
   });
   $("#jq2").LineProgressbar({
     percentage: 55,
     radius: "15px",
-    height: "20px",
+    height: "18px",
   });
   $("#jq3").LineProgressbar({
     percentage: 69,
     radius: "15px",
-    height: "20px",
+    height: "18px",
   });
   $("#jq4").LineProgressbar({
     percentage: 30,
     radius: "15px",
-    height: "20px",
+    height: "18px",
   });
 </script>
 <script>
@@ -507,14 +552,14 @@
     colors: [
       "#6E7C7C",
       "#435560",
-      "#C8C6A7",
+      // "#C8C6A7",
       "#92967D",
       "#000000",
-      "#00BCD4",
-      "#00ACC1",
-      "#0097A7",
-      "#00838F",
-      "#006064",
+      // "#00BCD4",
+      // "#00ACC1",
+      // "#0097A7",
+      // "#00838F",
+      // "#006064",
     ],
     labelColor: ["#435560"],
     data: [
@@ -536,18 +581,7 @@
   Morris.Donut({
     element: "invo",
     resize: true,
-    colors: [
-      "#855CF8",
-      "#FF0505",
-      "#B085FF",
-      "#503795",
-      "#FF0505",
-      "#00BCD4",
-      "#00ACC1",
-      "#0097A7",
-      "#00838F",
-      "#006064",
-    ],
+    colors: ["#855CF8", "#FF0505", "#5822f5", "#a07fff"],
     labelColor: "#435560",
     data: [
       { value: 26, label: "Total Invoice" },
@@ -567,18 +601,7 @@
   Morris.Donut({
     element: "timeg",
     resize: true,
-    colors: [
-      "#440A67",
-      "#93329E",
-      "#B4AEE8",
-      "#FFE3FE",
-      "#FF0505",
-      "#00BCD4",
-      "#00ACC1",
-      "#0097A7",
-      "#00838F",
-      "#006064",
-    ],
+    colors: ["#440A67", "#93329E", "#B4AEE8", "#FFE3FE"],
     labelColor: "#435560",
     data: [
       { value: 70, label: "Total Time Sheet" },
