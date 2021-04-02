@@ -3,6 +3,44 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
 }
+
+/* progress bar style */
+.progressbar {
+    width: 100%;
+	margin-top: 5px;
+	margin-bottom: 35px;
+	position: relative;
+	background-color: #EEEEEE;
+	/* box-shadow: inset 0px 1px 1px rgba(0,0,0,.1); */
+}
+
+.proggress{
+	height: 8px;
+	width: 10px;
+	background-color: #3498db;
+}
+
+.percentCount{
+	float:right;
+	margin-top: -20px;
+  margin-right: -60px;
+	clear: both;
+	font-weight: 500;
+	
+}
+#jq, #jq1, #jq2, #jq3, #jq4{
+  margin-left: -50px;
+  width: 93%;
+}
+
+@media screen and (max-width: 1200px){
+  #jq, #jq1, #jq2, #jq3, #jq4{
+     margin-left: 0px;
+     width: 90%;
+   }
+}
+
+/*  */
 /* pie-chart changed */
 .pie-point{
     width: 18px;
@@ -55,10 +93,7 @@ body {
     /* line-height: 50px; */
    font-size: 20px;
 }
-.progressbar{
-    box-shadow: none !important;
-    /* border: .5px solid black; */
-}
+
 .graph-data{
     display: inline-flex;
     width: 100px;
@@ -276,8 +311,8 @@ p {
     font-weight: bold;
 }
 #recritment .card .card-body .col-md-12 {
-    height: 307px;
-    border: 1px solid #d5e6ff;
+    height: 300px;
+    border: 1.5px solid #d6d6d6;
     border-radius: 5px;
     padding-top: 45px;
     margin-top: 40px;
@@ -324,8 +359,8 @@ p {
     letter-spacing: 1px;
 }
 #staff .card .card-body .col-md-12 {
-    height: 307px;
-    border: 1px solid #d5e6ff;
+    height: 300px;
+    border: 1.5px solid #d6d6d6;
     border-radius: 5px;
     padding-top: 45px;
     margin-top: 40px;
@@ -363,7 +398,7 @@ p {
 }
 #client .card .card-body .col-md-12 {
     height: 116px;
-    border: 1px solid #d5e6ff;
+    border: 1.5px solid #d6d6d6;
     border-radius: 5px;
     padding-top: 45px;
     margin-top: 40px;
@@ -389,10 +424,10 @@ p {
 }
 
 #data-card2 {
-    height: 307px;
+    height: 300px;
 }
 #data-card3 {
-    height: 307px;
+    height: 300px;
 }
 #data-card2 .col-9,
 #data-card2 .col-3 {
