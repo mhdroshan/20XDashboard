@@ -26,9 +26,44 @@ body {
     float: right;
     font-size: 16px;
 }
+.blog-button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 1px -1px 18px 0 rgb(25 42 70 / 55%);
+    color: white;
+    background-color: #00d8a6;
+    border: 1.5px solid #00d8a6;
+    cursor: pointer;
+    transition: all .3s ease;
+    position: sticky;
+    right: 0;
+    bottom: 20px;
+    margin: 10px 0 10px auto;
+    text-align: center;
+    z-index: 1000;
+    line-height: 55px;
+    font-size: 18px;
+
+}
+.blog-button:focus{
+    outline: none;
+}
+.blog-button:hover{
+    background-color: white;
+    color:#00d8a6;
+    /* line-height: 50px; */
+   font-size: 20px;
+}
 .progressbar{
     box-shadow: none !important;
     /* border: .5px solid black; */
+}
+.graph-data{
+    display: inline-flex;
+    width: 100px;
+    margin-top: 5px auto;
+    float: right;
 }
 /* media query */
 @media screen and (max-width: 420px) {
@@ -39,7 +74,12 @@ body {
   .card-hei{
     min-height: 620px;
     height: 100%;
+    margin-bottom: 20px;
   }
+  .card-hei2{
+  min-height: 500px;
+  height: 90%;
+}
 .card-title {
     font-family: 'Poppins', sans-serif;
     font-size: 27px;
@@ -48,8 +88,8 @@ body {
 .second-title {
     font-family: 'Poppins', sans-serif;
     font-size: 27px;
-    font-weight: bold;
-    margin-top: 30px;
+    font-weight: 700;
+    margin-top: 20px;
 }
 p {
     font-family: 'Poppins', sans-serif;
@@ -275,6 +315,13 @@ p {
     margin-top: -55px;
     color: #ffffff;
     font-weight: bold;
+    transition: all .3s ease;
+}
+.gradient-button:focus{
+    outline: none;
+}
+.gradient-button:hover{
+    letter-spacing: 1px;
 }
 #staff .card .card-body .col-md-12 {
     height: 307px;
@@ -373,15 +420,18 @@ p {
     margin-top: 20px;
 }
 #top-candid .card .week{
-  float: right;
-  margin-top: -30px;
-  margin-right: 20px;
-  color: #817D7D;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: normal;
+    float: right;
+    
+    margin-right: 20px;
+    position: absolute;
+    color: #817D7D;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    right: 10px;
+    top: 40px;
 }
 #pbar{
-  margin-top: 90px;
+  margin-top: 70px;
 }
 #pbar .col-md-3{
   float: left;
@@ -402,17 +452,15 @@ p {
     margin-top: 25px;
     float: right;
 }
-#month-invoice .card .col-5 ul li .invoice-rectangle{
+
+.invoice-rectangle{
   width:20px;
   height:20px;
-  background: #283975;
-  margin-left: 10px;
+  border-radius: 2px;
+  margin-right: 10px;
 }
-#month-invoice .card .col-5 ul li .invoice-rectangle1{
-  width:20px;
-  height:20px;
-  background: #B4AEE8;
-  margin-left: 10px;
+.graph-data p{
+    margin-bottom: 0;
 }
 #month-invoice .card .col-md-11{
   margin: 20px auto;

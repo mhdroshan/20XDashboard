@@ -422,35 +422,33 @@
           class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5"
           id="top-candid"
         >
-          <div class="card">
+          <div class="card card-hei2">
             <div class="card-body">
               <div class="card-title">
                 <h4 class="second-title">Top 5 Candidate</h4>
               </div>
               <div class="week">Week</div>
               <div class="container" id="top-container">
-                <div class="row">
-                  <div class="col-md-12" id="pbar">
-                    <div class="col-md-3 col-lg-12 col-xl-3">Name1</div>
-                    <div class="col-md-9 col-lg-12 col-xl-9">
-                      <div id="jq"></div>
-                    </div>
-                    <div class="col-md-3 col-lg-12 col-xl-3">Name2</div>
-                    <div class="col-md-9 col-lg-12 col-xl-9">
-                      <div id="jq1"></div>
-                    </div>
-                    <div class="col-md-3 col-lg-12 col-xl-3">Name3</div>
-                    <div class="col-md-9 col-lg-12 col-xl-9">
-                      <div id="jq2"></div>
-                    </div>
-                    <div class="col-md-3 col-lg-12 col-xl-3">Name4</div>
-                    <div class="col-md-9 col-lg-12 col-xl-9">
-                      <div id="jq3"></div>
-                    </div>
-                    <div class="col-md-3 col-lg-12 col-xl-3">Name5</div>
-                    <div class="col-md-9 col-lg-12 col-xl-9">
-                      <div id="jq4"></div>
-                    </div>
+                <div class="row" id="pbar">
+                  <div class="col-md-12 col-lg-12 col-xl-3">Name1</div>
+                  <div class="col-md-11 col-lg-11 col-xl-9">
+                    <div id="jq"></div>
+                  </div>
+                  <div class="col-md-6 col-lg-12 col-xl-3">Name2</div>
+                  <div class="col-md-11 col-lg-11 col-xl-9">
+                    <div id="jq1"></div>
+                  </div>
+                  <div class="col-md-6 col-lg-12 col-xl-3">Name3</div>
+                  <div class="col-md-11 col-lg-11 col-xl-9">
+                    <div id="jq2"></div>
+                  </div>
+                  <div class="col-md-6 col-lg-12 col-xl-3">Name4</div>
+                  <div class="col-md-11 col-lg-11 col-xl-9">
+                    <div id="jq3"></div>
+                  </div>
+                  <div class="col-md-6 col-lg-12 col-xl-3">Name5</div>
+                  <div class="col-md-11 col-lg-11 col-xl-9">
+                    <div id="jq4"></div>
                   </div>
                 </div>
               </div>
@@ -461,33 +459,41 @@
           class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7"
           id="month-invoice"
         >
-          <div class="card">
+          <div class="card card-hei2">
             <div class="card-body">
-              <div class="card-title">
-                <h4 class="second-title">Monthly Invoice / Shift Data</h4>
-              </div>
-              <div class="col-5">
-                <ul>
-                  <li>
-                    <div class="text-field">
-                      <p>Shift</p>
-                    </div>
-                    <div class="invoice-rectangle"></div>
-                  </li>
-                  <li>
-                    <div class="text-field">
-                      <p>Month</p>
-                    </div>
-                    <div class="invoice-rectangle1"></div>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-md-11">
-                <canvas id="sales-chart"></canvas>
+              <div class="row">
+                <div class="card-title col-lg-8 col-xl-8">
+                  <h4 class="second-title">Monthly Invoice / Shift Data</h4>
+                </div>
+                <div class="col-sm-12 col-lg-4 col-xl-4 my-3">
+                  <div class="graph-data">
+                    <div
+                      class="invoice-rectangle"
+                      style="background-color: #283975"
+                    ></div>
+                    <p>Shift</p>
+                  </div>
+
+                  <div class="graph-data">
+                    <div
+                      class="invoice-rectangle"
+                      style="background-color: #b4aee8"
+                    ></div>
+                    <p>Month</p>
+                  </div>
+                </div>
+                <div class="col-sm-12" style="margin-top: 30px">
+                  <canvas id="sales-chart"></canvas>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- blog button -->
+      <div class="blog-button">
+        <i class="fa fa-bell" aria-hidden="true"></i>
       </div>
     </div>
 
