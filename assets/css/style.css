@@ -56,6 +56,8 @@ pre {
     
 }
 .gradient-button{
+    transition: .3s ease-in;
+    line-height: 50px;
     animation-name: opac;
     animation-duration: 1s;
     animation-iteration-count: 1;
