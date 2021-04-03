@@ -1,7 +1,10 @@
 body {
-    background: #f9f9f9;
+    background: #f2f4f4;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
+    scroll-behavior: smooth;
+    text-transform: capitalize;
+    box-sizing: border-box;
 }
 
 /* progress bar style */
@@ -20,6 +23,58 @@ body {
 	background-color: #3498db;
 }
 
+/* pie animations */
+#graph svg,#invo svg,#timeg svg{
+    animation-name: zoom;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    /* animation-delay: .5s; */
+    
+}
+.gradient-button{
+    animation-name: opac;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes opac {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+@keyframes zoom {
+    from {transform: scale(0.7);}
+    to {transform: scale(1);}
+  }
+.pie-point{
+   
+    animation-delay: 1.5s;
+    animation: point ease .5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+}
+@keyframes point {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+  }
+
+.second-title{
+    animation-name: Mright;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes Mright {
+    from {transform: translateX(0);}
+    to {transform: translateX(10px);}
+  }
+
+  /*  */
+.wid95{
+    width: 95%;
+}
 .percentCount{
 	float:right;
 	margin-top: -20px;
@@ -101,9 +156,14 @@ body {
     float: right;
 }
 /* media query */
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 450px) {
     .second-title {
       font-size: 23px !important;
+    }
+    .gradient-button{
+        width: 120px !important;
+        height: 45px !important;
+        margin-top: -50px !important;
     }
   }
   .card-hei{
@@ -123,8 +183,10 @@ body {
 .second-title {
     font-family: 'Poppins', sans-serif;
     font-size: 27px;
+    transition: .3s all ease-in;
     font-weight: 700;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-left: 0px;
 }
 p {
     font-family: 'Poppins', sans-serif;
@@ -134,7 +196,8 @@ p {
 }
 
 .card{
-    border: none;
+    /* border: none; */
+    border: 1px solid #0000001c;
     margin: 20px auto;
    
 }
@@ -341,12 +404,12 @@ p {
 }
 #staff .card .card-body .gradient-button {
     width: 140px;
-    height: 52px;
+    height: 50px;
     border: none;
     border-radius: 35px;
     background-image: linear-gradient(to right, #2af5a0, #009efd);
     float: right;
-    margin-right: 20px;
+    margin-right: 10px;
     margin-top: -55px;
     color: #ffffff;
     font-weight: bold;
@@ -386,12 +449,12 @@ p {
 }
 #client .card .card-body .gradient-button {
     width: 140px;
-    height: 52px;
+    height: 50px;
     border: none;
     border-radius: 35px;
     background-image: linear-gradient(to right, #2af5a0, #009efd);
     float: right;
-    margin-right: 20px;
+    margin-right: 10px;
     margin-top: -55px;
     color: #ffffff;
     font-weight: bold;
@@ -454,7 +517,7 @@ p {
 #top-widget, #event-cal{
     margin-top: 20px;
 }
-#top-candid .card .week{
+ .card .week{
     float: right;
     
     margin-right: 20px;
@@ -463,7 +526,7 @@ p {
     font-family: 'Montserrat', sans-serif;
     font-weight: normal;
     right: 10px;
-    top: 40px;
+    top: 30px;
 }
 #pbar{
   margin-top: 70px;
@@ -525,8 +588,9 @@ p{
     border-radius: 35px;
     background-image: linear-gradient(to right, #2af5a0, #009efd);
     float: right;
-    margin-right: 20px;
+    margin-right: 10px;
     margin-top: -55px;
+    transition: .3s all ease;
     color: #ffffff;
     font-weight: bold;
 }

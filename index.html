@@ -59,7 +59,9 @@
         <div class="col-md-12 col-lg-6 col-xl-4 my-3">
           <div class="card card-hei">
             <div class="card-body">
-              <h5 class="card-title">Shift</h5>
+              <div class="card-title">
+                <h4 class="second-title">Shift</h4>
+              </div>
               <div class="col-md-12">
                 <div id="graph"></div>
               </div>
@@ -157,7 +159,9 @@
         <div class="col-md-12 col-lg-6 col-xl-4 my-3">
           <div class="card card-hei">
             <div class="card-body">
-              <h5 class="card-title">Invoice</h5>
+              <div class="card-title">
+                <h4 class="second-title">Invoice</h4>
+              </div>
               <div class="col-md-12">
                 <div id="invo"></div>
               </div>
@@ -203,7 +207,9 @@
         <div class="col-md-12 col-lg-6 col-xl-4 my-3">
           <div class="card card-hei">
             <div class="card-body">
-              <h5 class="card-title">Time Sheet</h5>
+              <div class="card-title">
+                <h4 class="second-title">Time sheet</h4>
+              </div>
               <div class="col-md-12">
                 <div id="timeg"></div>
               </div>
@@ -215,14 +221,14 @@
                         style="background-color: #440a67"
                         class="pie-point"
                       ></div>
-                      <p>Total Time Sheet</p>
+                      <p>Total Time sheet</p>
                     </div>
                     <div class="dis-flex">
                       <div
                         style="background-color: #93329e"
                         class="pie-point"
                       ></div>
-                      <p>Signed Off</p>
+                      <p>Signed off</p>
                     </div>
                   </div>
                   <div class="col-sm-6 p-1">
@@ -231,14 +237,14 @@
                         style="background-color: #b4aee8"
                         class="pie-point"
                       ></div>
-                      <p>Pending Sign Off</p>
+                      <p>Pending Sign off</p>
                     </div>
                     <div class="dis-flex">
                       <div
                         style="background-color: #ffe3fe"
                         class="pie-point"
                       ></div>
-                      <p>Pending Submittion</p>
+                      <p>Pending submittion</p>
                     </div>
                   </div>
                 </div>
@@ -280,7 +286,7 @@
       <!--Second Row-->
       <div class="row">
         <div class="col-md-6 col-lg-6 col-xl-4 my-3" id="recritment">
-          <div class="card">
+          <div class="card wid95">
             <div class="card-body">
               <div class="card-title">
                 <h4 class="second-title">Recruitment</h4>
@@ -330,7 +336,7 @@
         </div>
 
         <div class="col-md-6 col-lg-6 col-xl-4 my-3" id="staff">
-          <div class="card">
+          <div class="card wid95">
             <div class="card-body">
               <div class="card-title"><h4 class="second-title">Staff</h4></div>
               <button class="gradient-button">View All</button>
@@ -377,7 +383,7 @@
           </div>
         </div>
         <div class="col-md-6 col-lg-6 col-xl-4 my-3" id="client">
-          <div class="card">
+          <div class="card wid95">
             <div class="card-body">
               <div class="card-title"><h4 class="second-title">Client</h4></div>
               <button class="gradient-button">View All</button>
@@ -519,7 +525,7 @@
     <script src="in/js/progressbar.js"></script>
     <!-- <script src="assets/js/jquery.lineProgressbar.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="jquery.lineProgressbar.js"></script>
+    <script src="./in/js/jquery.lineProgressbar.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
@@ -613,10 +619,10 @@
     colors: ["#440A67", "#93329E", "#B4AEE8", "#FFE3FE"],
     labelColor: "#435560",
     data: [
-      { value: 70, label: "Total Time Sheet" },
-      { value: 30, label: "Signed Off" },
+      { value: 70, label: "Total Time sheet" },
+      { value: 30, label: "Signed off" },
       { value: 52, label: "Pending Sign Off" },
-      { value: 52, label: "Pending Submittion" },
+      { value: 52, label: "Pending submittion" },
     ],
     formatter: function (x) {
       return x + "";
