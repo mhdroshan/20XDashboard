@@ -391,6 +391,7 @@ p {
     width: 140px;
     height: 50px;
     border: none;
+    transition: .3s ease-in;
     border-radius: 35px;
     background-image: linear-gradient(to right, #2af5a0, #009efd);
     float: right;
@@ -430,6 +431,7 @@ p {
 }
 #staff .card .card-body .gradient-button {
     width: 140px;
+    transition: .3s ease-in;
     height: 50px;
     border: none;
     border-radius: 35px;
